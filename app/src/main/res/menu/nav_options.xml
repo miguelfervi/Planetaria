@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/menu_batalla"
+            android:title="Batalla"
+            android:icon="@drawable/gun"
+
+            />
+        <item
+            android:id="@+id/menu_sistema_de_exploracion"
+            android:title="Sistema de exploración"
+            android:icon="@drawable/nfc"
+            />
+        <item
+            android:id="@+id/menu_escuadra"
+            android:title="Escuadra"
+            android:icon="@drawable/starwars"
+            />
+        <item
+            android:id="@+id/menu_explorador"
+            android:title="Explorador"
+            android:icon="@drawable/astronaut"
+            />
+        <item
+            android:id="@+id/menu_conquista"
+            android:title="Conquista"
+            android:icon="@drawable/solarsystem"
+            />
+        <item
+            android:id="@+id/menu_alertas"
+            android:title="Alertas"
+            android:icon="@drawable/bell"
+            />
+        <item
+            android:id="@+id/menu_cerrar_sesion"
+            android:title=" Cerrar Sesión"
+            android:icon="@drawable/logout"
+            />
+
+    </group>
+
+</menu>

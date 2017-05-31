@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tfm.miguel.planetaria.Activities.LoginActivity">
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editTextPassword"
+        android:layout_alignStart="@+id/editTextPassword"
+        android:layout_marginBottom="51dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:text="Email"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="149dp" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/switchRemember"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="21dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:text="Contraseña"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="234dp" />
+
+    <Switch
+        android:id="@+id/switchRemember"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="34dp"
+        android:text="Recordar"
+        tools:layout_editor_absoluteX="151dp"
+        tools:layout_editor_absoluteY="300dp"
+        android:layout_above="@+id/buttonAcceder"
+        android:layout_alignEnd="@+id/editTextPassword" />
+
+    <Button
+        android:id="@+id/buttonAcceder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="77dp"
+        android:text="Acceder"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="371dp" />
+
+    <ImageView
+        android:id="@+id/imageViewPlanetaria"
+        android:layout_width="96dp"
+        android:layout_height="72dp"
+        app:srcCompat="@mipmap/ic_launcher"
+        tools:layout_editor_absoluteX="144dp"
+        tools:layout_editor_absoluteY="31dp"
+        android:layout_above="@+id/editTextEmail"
+        android:layout_alignEnd="@+id/buttonAcceder"
+        android:layout_marginBottom="34dp" />
+</RelativeLayout>
