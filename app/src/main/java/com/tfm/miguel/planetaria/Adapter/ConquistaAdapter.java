@@ -7,6 +7,8 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import com.tfm.miguel.planetaria.Fragments.ConquistaFragment;
 import com.tfm.miguel.planetaria.Fragments.LogrosFragment;
 import com.tfm.miguel.planetaria.Fragments.NaveFragment;
+import com.tfm.miguel.planetaria.Fragments.Space1Fragment;
+import com.tfm.miguel.planetaria.Fragments.Space2Fragment;
 
 /**
  * Created by miguelfernandezvillegas on 31/5/17.
@@ -27,9 +29,11 @@ public class ConquistaAdapter extends FragmentStatePagerAdapter {
 
         switch (position){
             case 0:
-                return new ConquistaFragment();
+                return new Space1Fragment();
             case 1:
-                return new ConquistaFragment();
+                return new Space2Fragment();
+            case 2:
+                return new LogrosFragment();
 
             default:
                 return null;

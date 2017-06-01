@@ -32,7 +32,7 @@ public class ExploradorFragment extends Fragment {
         TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tabMenu);
         tabLayout.addTab(tabLayout.newTab().setText("Nave"));
         tabLayout.addTab(tabLayout.newTab().setText("Logros"));
-        tabLayout.addTab(tabLayout.newTab().setText("Notificaciones"));
+        tabLayout.addTab(tabLayout.newTab().setText("Rango"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         final ViewPager viewPager = (ViewPager) view.findViewById(R.id.viewPager);

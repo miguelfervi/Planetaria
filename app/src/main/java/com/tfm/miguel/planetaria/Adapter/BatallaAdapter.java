@@ -4,7 +4,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
+import com.tfm.miguel.planetaria.Fragments.BescaramuzaFragment;
 import com.tfm.miguel.planetaria.Fragments.ConquistaFragment;
+import com.tfm.miguel.planetaria.Fragments.IndividualFragment;
 
 /**
  * Created by miguelfernandezvillegas on 31/5/17.
@@ -25,9 +27,9 @@ public class BatallaAdapter extends FragmentStatePagerAdapter {
 
         switch (position){
             case 0:
-                return new ConquistaFragment();
+                return new IndividualFragment();
             case 1:
-                return new ConquistaFragment();
+                return new BescaramuzaFragment();
 
             default:
                 return null;

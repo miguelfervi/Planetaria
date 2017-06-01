@@ -4,17 +4,12 @@
     android:layout_height="match_parent"
     tools:context="com.tfm.miguel.planetaria.Fragments.SistemaExploracionFragment">
 
+    <include layout="@layout/profile" android:id="@+id/profile"></include>
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/textViewSistemaNavegacion"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="36dp"
-        android:gravity="center"
-        android:text="Sistema de navegación" />
+
 
     <android.support.design.widget.TabLayout
-        android:layout_below="@id/textViewSistemaNavegacion"
+        android:layout_below="@id/profile"
         android:id="@+id/tabMenu"
         android:layout_height="50dp"
         android:layout_width="match_parent"

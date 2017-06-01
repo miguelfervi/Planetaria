@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.tfm.miguel.planetaria.Adapter.ExploradorAdapter;
+import com.tfm.miguel.planetaria.Adapter.SistemaNavegacionAdapter;
 import com.tfm.miguel.planetaria.R;
 
 /**
@@ -36,7 +37,7 @@ public class SistemaExploracionFragment extends Fragment {
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         final ViewPager viewPager = (ViewPager) view.findViewById(R.id.viewPager);
-        ExploradorAdapter adapter = new ExploradorAdapter(getFragmentManager(),tabLayout.getTabCount());
+        SistemaNavegacionAdapter adapter = new SistemaNavegacionAdapter(getFragmentManager(),tabLayout.getTabCount());
 
         viewPager.setAdapter(adapter);
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));

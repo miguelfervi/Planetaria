@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.tfm.miguel.planetaria.Adapter.ConquistaAdapter;
 import com.tfm.miguel.planetaria.Adapter.ExploradorAdapter;
 import com.tfm.miguel.planetaria.R;
 
@@ -32,10 +33,11 @@ public class ConquistaFragment extends Fragment {
         TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tabMenu);
         tabLayout.addTab(tabLayout.newTab().setText("Primer sistema"));
         tabLayout.addTab(tabLayout.newTab().setText("Segundo sistema"));
+        tabLayout.addTab(tabLayout.newTab().setText("Logros"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         final ViewPager viewPager = (ViewPager) view.findViewById(R.id.viewPager);
-        ExploradorAdapter adapter = new ExploradorAdapter(getFragmentManager(),tabLayout.getTabCount());
+        ConquistaAdapter adapter = new ConquistaAdapter(getFragmentManager(),tabLayout.getTabCount());
 
         viewPager.setAdapter(adapter);
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));

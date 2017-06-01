@@ -5,6 +5,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 import com.tfm.miguel.planetaria.Fragments.ConquistaFragment;
+import com.tfm.miguel.planetaria.Fragments.EventosFragment;
 import com.tfm.miguel.planetaria.Fragments.MapFragment;
 import com.tfm.miguel.planetaria.Fragments.NFCFragment;
 
@@ -30,6 +31,8 @@ public class SistemaNavegacionAdapter extends FragmentStatePagerAdapter {
                 return new NFCFragment();
             case 1:
                 return new MapFragment();
+            case 2:
+                return new EventosFragment();
 
             default:
                 return null;

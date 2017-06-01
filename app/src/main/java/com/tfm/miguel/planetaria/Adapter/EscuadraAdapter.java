@@ -5,7 +5,9 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 import com.tfm.miguel.planetaria.Fragments.AlertFragment;
+import com.tfm.miguel.planetaria.Fragments.EscaramuzasFragment;
 import com.tfm.miguel.planetaria.Fragments.LogrosFragment;
+import com.tfm.miguel.planetaria.Fragments.MiembrosFragment;
 import com.tfm.miguel.planetaria.Fragments.NaveFragment;
 
 /**
@@ -27,11 +29,11 @@ public class EscuadraAdapter extends FragmentStatePagerAdapter {
 
         switch (position){
             case 0:
-                return new NaveFragment();
+                return new EscaramuzasFragment();
             case 1:
-                return new LogrosFragment();
+                return new EscaramuzasFragment();
             case 2:
-                return new AlertFragment();
+                return new MiembrosFragment();
 
             default:
                 return null;

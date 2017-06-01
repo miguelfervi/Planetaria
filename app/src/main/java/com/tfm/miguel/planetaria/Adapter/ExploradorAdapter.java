@@ -9,6 +9,7 @@ import com.tfm.miguel.planetaria.Fragments.BatallaFragment;
 import com.tfm.miguel.planetaria.Fragments.ConquistaFragment;
 import com.tfm.miguel.planetaria.Fragments.LogrosFragment;
 import com.tfm.miguel.planetaria.Fragments.NaveFragment;
+import com.tfm.miguel.planetaria.Fragments.RangoFragment;
 
 /**
  * Created by miguelfernandezvillegas on 31/5/17.
@@ -33,7 +34,7 @@ public class ExploradorAdapter extends FragmentStatePagerAdapter {
             case 1:
                 return new LogrosFragment();
             case 2:
-                return new AlertFragment();
+                return new RangoFragment();
 
             default:
                 return null;

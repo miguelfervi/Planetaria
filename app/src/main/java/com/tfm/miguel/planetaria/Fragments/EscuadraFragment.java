@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.tfm.miguel.planetaria.Adapter.EscuadraAdapter;
 import com.tfm.miguel.planetaria.Adapter.ExploradorAdapter;
 
 import com.tfm.miguel.planetaria.R;
@@ -33,13 +34,13 @@ public class EscuadraFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_escuadra, container, false);
 
         TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tabMenu);
-        tabLayout.addTab(tabLayout.newTab().setText("Retos superados"));
-        tabLayout.addTab(tabLayout.newTab().setText("Próximos retos"));
-        tabLayout.addTab(tabLayout.newTab().setText("Porcentaje de conquista"));
+        tabLayout.addTab(tabLayout.newTab().setText("Escaramuzas pendientes"));
+        tabLayout.addTab(tabLayout.newTab().setText("Escaramuzas"));
+        tabLayout.addTab(tabLayout.newTab().setText("Miembros"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         final ViewPager viewPager = (ViewPager) view.findViewById(R.id.viewPager);
-        ExploradorAdapter adapter = new ExploradorAdapter(getFragmentManager(),tabLayout.getTabCount());
+        EscuadraAdapter adapter = new EscuadraAdapter(getFragmentManager(),tabLayout.getTabCount());
 
         viewPager.setAdapter(adapter);
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));

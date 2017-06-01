@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
+import com.tfm.miguel.planetaria.Fragments.AlertFragment;
 import com.tfm.miguel.planetaria.Fragments.BatallaFragment;
 import com.tfm.miguel.planetaria.Fragments.ConquistaFragment;
 import com.tfm.miguel.planetaria.Fragments.EscuadraFragment;
@@ -80,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                     case R.id.menu_alertas:
-                        fragment = new BatallaFragment();
+                        fragment = new AlertFragment();
                         fragmentTransaction = true;
 
                         break;

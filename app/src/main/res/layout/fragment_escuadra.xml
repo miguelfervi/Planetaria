@@ -5,17 +5,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.tfm.miguel.planetaria.Fragments.EscuadraFragment">
 
+    <include layout="@layout/profile" android:id="@+id/profile"></include>
 
-    <TextView
-        android:id="@+id/textViewEscuadra"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="36dp"
-        android:gravity="center"
-        android:text="Escuadra" />
+
 
     <android.support.design.widget.TabLayout
-        android:layout_below="@id/textViewEscuadra"
+        android:layout_below="@id/profile"
         android:id="@+id/tabMenu"
         android:layout_height="50dp"
         android:layout_width="match_parent"
