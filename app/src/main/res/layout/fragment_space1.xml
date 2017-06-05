@@ -2,12 +2,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
     tools:context="com.tfm.miguel.planetaria.Fragments.Space1Fragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ImageButton
+        android:layout_below="@id/tabMenu"
+        android:id="@+id/conquista"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:src="@drawable/solarsystem"
+        />
 
 </FrameLayout>

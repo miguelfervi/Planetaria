@@ -45,6 +45,13 @@ public class MainActivity extends AppCompatActivity {
                 Fragment fragment = null;
 
                 switch (item.getItemId()){
+
+                    case R.id.menu_conquista:
+                        fragment = new ConquistaFragment();
+                        fragmentTransaction = true;
+
+
+                        break;
                     case R.id.menu_batalla:
                         fragment = new BatallaFragment();
                         fragmentTransaction = true;
@@ -72,12 +79,7 @@ public class MainActivity extends AppCompatActivity {
 
                         break;
 
-                    case R.id.menu_conquista:
-                        fragment = new ConquistaFragment();
-                        fragmentTransaction = true;
 
-
-                        break;
 
 
                     case R.id.menu_alertas:
@@ -109,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setFragmentByDefault(){
-        changeFragment(new ConquistaFragment(), navigationView.getMenu().getItem(4));
+        changeFragment(new ConquistaFragment(), navigationView.getMenu().getItem(0));
     }
 
     private void changeFragment(Fragment fragment, MenuItem item){
