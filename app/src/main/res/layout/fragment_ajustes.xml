@@ -2,10 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-    tools:context="com.tfm.miguel.planetaria.Fragments.AlertFragment">
+    tools:context="com.tfm.miguel.planetaria.Fragments.AjustesFragment">
 
     <include layout="@layout/profile" android:id="@+id/profile"></include>
 
@@ -24,4 +21,5 @@
         android:id="@+id/viewPager"
         android:layout_height="match_parent"
         android:layout_width="match_parent" />
+
 </RelativeLayout>

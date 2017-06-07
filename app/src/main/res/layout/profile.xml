@@ -130,6 +130,16 @@
             android:text="Créditos"
             android:layout_alignTop="@+id/textViewVida" />
 
+        <TextView
+            android:id="@+id/textViewNumeroCreditos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1250"
+            android:textColor="#F000"
+            android:layout_below="@+id/textViewCreditos"
+            android:layout_alignStart="@+id/textViewCreditos"
+            />
+
     </RelativeLayout>
 
 
