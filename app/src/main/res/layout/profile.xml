@@ -7,25 +7,132 @@
     app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
     tools:context="com.tfm.miguel.planetaria.Fragments.ExploradorFragment">
 
-<ImageView android:id="@+id/astronauta"
-    android:layout_marginLeft="-60dp"
-    android:layout_marginRight="0dp"
-    android:layout_width="250dp"
-    android:layout_height="150dp"
-    android:src="@drawable/player"
-    android:background="@color/colorSecondaryText"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_alignParentTop="true"
-    android:layout_alignParentEnd="true"
-    android:layout_marginEnd="193dp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout"
+        android:background="@color/colorPrimaryLight"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
 
-<ImageView android:id="@+id/vida"
-    android:layout_marginLeft="190dp"
-    android:layout_marginRight="00dp"
-    android:layout_width="250dp"
-    android:layout_height="150dp"
-    android:src="@drawable/player"
-    android:background="@color/colorSecondaryText"
-    xmlns:android="http://schemas.android.com/apk/res/android" />
+
+
+    <ImageView android:id="@+id/astronauta"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="0dp"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:src="@drawable/player"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+
+        <TextView
+            android:id="@+id/textViewVida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Vidas"
+            android:textColor="#F000"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/vida" />
+
+        <ImageView
+            android:id="@+id/vida"
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="0dp"
+            android:layout_row="0"
+            android:src="@drawable/vidavacia"
+            android:layout_marginStart="12dp"
+            android:layout_below="@+id/textViewVida"
+            android:layout_toEndOf="@+id/astronauta" />
+        <TextView
+            android:id="@+id/textViewExperiencia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Experiencia"
+            android:textColor="#F000"
+            android:layout_alignBaseline="@+id/textViewVida"
+            android:layout_alignBottom="@+id/textViewVida"
+            android:layout_alignStart="@+id/experiencia" />
+        <ImageView
+            android:id="@+id/experiencia"
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="0dp"
+            android:layout_row="0"
+            android:layout_below="@+id/textViewExperiencia"
+            android:src="@drawable/estrellavacia"
+            android:layout_alignStart="@+id/vida" />
+
+        <TextView
+            android:id="@+id/textViewNombreEscuadra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ingenieros de Software"
+            android:textColor="#F000"
+            android:layout_alignBaseline="@+id/textViewEscuadra"
+            android:layout_alignBottom="@+id/textViewEscuadra"
+            android:layout_alignStart="@+id/experiencia" />
+
+        <TextView
+            android:id="@+id/textViewEscuadra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="98dp"
+            android:layout_marginRight="0dp"
+            android:layout_alignParentStart="true"
+            android:textColor="#F000"
+            android:text="Escuadra"
+            android:layout_toEndOf="@+id/astronauta"
+            android:layout_below="@+id/vida" />
+        <TextView
+            android:id="@+id/textViewNivel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="98dp"
+            android:layout_marginRight="0dp"
+            android:layout_alignParentStart="true"
+            android:textColor="#F000"
+            android:text="Nivel"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/textViewEscuadra" />
+
+        <TextView
+            android:id="@+id/textViewNivelJugador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:textColor="#F000"
+            android:layout_alignBaseline="@+id/textViewNivel"
+            android:layout_alignBottom="@+id/textViewNivel"
+            android:layout_alignStart="@+id/textViewNombreEscuadra" />
+
+        <TextView
+            android:id="@+id/textViewCreditos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="200dp"
+            android:layout_marginStart="98dp"
+            android:layout_marginRight="150dp"
+            android:textColor="#F000"
+            android:layout_alignBottom="@+id/textViewExperiencia"
+            android:layout_alignStart="@+id/experiencia"
+            android:text="Créditos"
+            android:layout_alignTop="@+id/textViewVida" />
+
+    </RelativeLayout>
+
+
+
 
 </RelativeLayout>
