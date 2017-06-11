@@ -1,4 +1,4 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,13 +7,18 @@
     app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
     tools:context="com.tfm.miguel.planetaria.Fragments.Space1Fragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <ImageButton
-        android:layout_below="@id/tabMenu"
-        android:id="@+id/conquista"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/solarsystem"
-        />
 
-</FrameLayout>
+    <include layout="@layout/profile" android:id="@+id/profile"></include>
+
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id="@+id/conquista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/mundo01"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/profile"/>
+
+</RelativeLayout>

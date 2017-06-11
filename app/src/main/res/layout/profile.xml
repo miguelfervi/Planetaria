@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:id="@+id/linearLayout"
-        android:background="@color/colorPrimaryLight"
+        android:background="@color/colorPrimary"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true">
 
@@ -35,7 +35,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:text="Vidas"
-            android:textColor="#F000"
             android:layout_alignParentTop="true"
             android:layout_alignStart="@+id/vida" />
 
@@ -55,7 +54,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Experiencia"
-            android:textColor="#F000"
             android:layout_alignBaseline="@+id/textViewVida"
             android:layout_alignBottom="@+id/textViewVida"
             android:layout_alignStart="@+id/experiencia" />
@@ -75,7 +73,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Ingenieros de Software"
-            android:textColor="#F000"
             android:layout_alignBaseline="@+id/textViewEscuadra"
             android:layout_alignBottom="@+id/textViewEscuadra"
             android:layout_alignStart="@+id/experiencia" />
@@ -89,7 +86,6 @@
             android:layout_marginStart="98dp"
             android:layout_marginRight="0dp"
             android:layout_alignParentStart="true"
-            android:textColor="#F000"
             android:text="Escuadra"
             android:layout_toEndOf="@+id/astronauta"
             android:layout_below="@+id/vida" />
@@ -102,7 +98,6 @@
             android:layout_marginStart="98dp"
             android:layout_marginRight="0dp"
             android:layout_alignParentStart="true"
-            android:textColor="#F000"
             android:text="Nivel"
             android:layout_marginBottom="10dp"
             android:layout_below="@+id/textViewEscuadra" />
@@ -112,7 +107,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="5"
-            android:textColor="#F000"
             android:layout_alignBaseline="@+id/textViewNivel"
             android:layout_alignBottom="@+id/textViewNivel"
             android:layout_alignStart="@+id/textViewNombreEscuadra" />
@@ -124,7 +118,6 @@
             android:layout_marginLeft="200dp"
             android:layout_marginStart="98dp"
             android:layout_marginRight="150dp"
-            android:textColor="#F000"
             android:layout_alignBottom="@+id/textViewExperiencia"
             android:layout_alignStart="@+id/experiencia"
             android:text="Créditos"
@@ -135,7 +128,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1250"
-            android:textColor="#F000"
             android:layout_below="@+id/textViewCreditos"
             android:layout_alignStart="@+id/textViewCreditos"
             />
