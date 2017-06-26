@@ -11,15 +11,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-import com.tfm.miguel.planetaria.Fragments.AjustesFragment;
-import com.tfm.miguel.planetaria.Fragments.AlertFragment;
-import com.tfm.miguel.planetaria.Fragments.BatallaFragment;
 import com.tfm.miguel.planetaria.Fragments.ConquistaFragment;
-import com.tfm.miguel.planetaria.Fragments.EmblemasFragment;
-import com.tfm.miguel.planetaria.Fragments.EscuadraFragment;
-import com.tfm.miguel.planetaria.Fragments.ExploradorFragment;
-import com.tfm.miguel.planetaria.Fragments.GaleriaFragment;
-import com.tfm.miguel.planetaria.Fragments.SistemaExploracionFragment;
 import com.tfm.miguel.planetaria.R;
 
 public class MainActivity extends AppCompatActivity {
@@ -55,61 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                         break;
-                    case R.id.menu_batalla:
-                        fragment = new BatallaFragment();
-                        fragmentTransaction = true;
 
-                        break;
-
-                    case R.id.menu_sistema_de_exploracion:
-                        fragment = new SistemaExploracionFragment();
-                        fragmentTransaction = true;
-
-
-                        break;
-
-                    case R.id.menu_escuadra:
-                        fragment = new EscuadraFragment();
-                        fragmentTransaction = true;
-
-
-                        break;
-
-                    case R.id.menu_explorador:
-                        fragment = new ExploradorFragment();
-                        fragmentTransaction = true;
-
-
-                        break;
-
-                    case R.id.menu_galeria_espacial:
-                        fragment = new GaleriaFragment();
-                        fragmentTransaction = true;
-
-
-                        break;
-
-                    case R.id.menu_emblemas:
-                        fragment = new EmblemasFragment();
-                        fragmentTransaction = true;
-
-
-                        break;
-
-
-
-                    case R.id.menu_alertas:
-                        fragment = new AlertFragment();
-                        fragmentTransaction = true;
-
-                        break;
-
-                    case R.id.menu_ajustes:
-                        fragment = new AjustesFragment();
-                        fragmentTransaction = true;
-
-
-                        break;
 
                 }
 

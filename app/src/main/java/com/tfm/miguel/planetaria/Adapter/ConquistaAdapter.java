@@ -4,9 +4,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import com.tfm.miguel.planetaria.Fragments.ConquistaFragment;
 import com.tfm.miguel.planetaria.Fragments.LogrosFragment;
-import com.tfm.miguel.planetaria.Fragments.NaveFragment;
 import com.tfm.miguel.planetaria.Fragments.Space1Fragment;
 import com.tfm.miguel.planetaria.Fragments.Space2Fragment;
 

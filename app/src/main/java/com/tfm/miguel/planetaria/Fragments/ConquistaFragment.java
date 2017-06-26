@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.tfm.miguel.planetaria.Adapter.ConquistaAdapter;
-import com.tfm.miguel.planetaria.Adapter.ExploradorAdapter;
 import com.tfm.miguel.planetaria.R;
 
 /**
