@@ -3,10 +3,14 @@ package com.tfm.miguel.planetaria.Activities;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
 import com.tfm.miguel.planetaria.R;
+
+import static com.tfm.miguel.planetaria.R.layout.toolbar;
 
 public class DessiActivity extends AppCompatActivity {
 
@@ -15,6 +19,7 @@ public class DessiActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dessi);
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        myToolbar.setTitle("DESSI");
         setSupportActionBar(myToolbar);
 
         Window window = this.getWindow();
@@ -27,5 +32,20 @@ public class DessiActivity extends AppCompatActivity {
 
         // finally change the color
         window.setStatusBarColor(getResources().getColor(R.color.colorPrimaryDark));
+
+
+        setSupportActionBar(myToolbar);
+       // myToolbar.setNavigationIcon(R.drawable.bell); // Set the icon
+
+        // Icon click listener
+        myToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               finish();
+            }
+        });
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
     }
 }

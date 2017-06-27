@@ -35,62 +35,72 @@
             android:id="@+id/textViewVida"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
             android:text="Vidas"
-            android:layout_alignParentTop="true"
-            android:layout_alignStart="@+id/vida" />
+            android:layout_marginStart="59dp"
+            android:layout_alignBaseline="@+id/textViewExperiencia"
+            android:layout_alignBottom="@+id/textViewExperiencia"
+            android:layout_toEndOf="@+id/textViewExperiencia" />
 
-        <ImageView
-            android:id="@+id/vida"
-            android:layout_width="60dp"
-            android:layout_height="20dp"
-            android:layout_marginLeft="100dp"
-            android:layout_marginRight="0dp"
-            android:layout_row="0"
-            android:src="@drawable/vidavacia"
-            android:layout_marginStart="12dp"
-            android:layout_below="@+id/textViewVida"
-            android:layout_toEndOf="@+id/astronauta" />
+        <TextView
+            android:id="@+id/textViewVVida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+
+            android:layout_above="@+id/textViewClasificacion"
+            android:layout_alignEnd="@+id/textViewVida" />
+        <TextView
+            android:id="@+id/textViewVExperiencia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="200"
+
+            android:layout_above="@+id/textViewClasificacion"
+            android:layout_alignEnd="@+id/textViewExperiencia" />
+        <TextView
+            android:id="@+id/textViewVClasificacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1º"
+            android:layout_alignBaseline="@+id/textViewClasificacion"
+            android:layout_alignBottom="@+id/textViewClasificacion"
+            android:layout_alignStart="@+id/textViewVExperiencia" />
+
+        <TextView
+            android:id="@+id/textViewVRecompensas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textViewRecompensas"
+            android:layout_alignBottom="@+id/textViewRecompensas"
+            android:layout_alignStart="@+id/textViewVClasificacion"
+            android:text="4" />
+
+        <TextView
+            android:id="@+id/textViewRecompensas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recompensas"
+            android:layout_alignBottom="@+id/astronauta"
+            android:layout_alignStart="@+id/textViewClasificacion" />
+
+        <TextView
+            android:id="@+id/textViewClasificacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clasificación"
+            android:layout_below="@+id/textViewNivelJugador"
+            android:layout_alignStart="@+id/textViewNivel"
+            android:layout_marginTop="14dp" />
+
         <TextView
             android:id="@+id/textViewExperiencia"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Experiencia"
-            android:layout_alignBaseline="@+id/textViewVida"
-            android:layout_alignBottom="@+id/textViewVida"
-            android:layout_alignStart="@+id/experiencia" />
-        <ImageView
-            android:id="@+id/experiencia"
-            android:layout_width="60dp"
-            android:layout_height="20dp"
-            android:layout_marginLeft="100dp"
-            android:layout_marginRight="0dp"
-            android:layout_row="0"
-            android:layout_below="@+id/textViewExperiencia"
-            android:src="@drawable/estrellavacia"
-            android:layout_alignStart="@+id/vida" />
+            android:layout_alignBaseline="@+id/textViewNivel"
+            android:layout_alignBottom="@+id/textViewNivel"
+            android:layout_centerHorizontal="true" />
 
-        <TextView
-            android:id="@+id/textViewNombreEscuadra"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ingenieros de Software"
-            android:layout_alignBaseline="@+id/textViewEscuadra"
-            android:layout_alignBottom="@+id/textViewEscuadra"
-            android:layout_alignStart="@+id/experiencia" />
-
-        <TextView
-            android:id="@+id/textViewEscuadra"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="150dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="98dp"
-            android:layout_marginRight="0dp"
-            android:layout_alignParentStart="true"
-            android:text="Escuadra"
-            android:layout_toEndOf="@+id/astronauta"
-            android:layout_below="@+id/vida" />
         <TextView
             android:id="@+id/textViewNivel"
             android:layout_width="wrap_content"
@@ -109,30 +119,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="5"
-            android:layout_alignBaseline="@+id/textViewNivel"
-            android:layout_alignBottom="@+id/textViewNivel"
-            android:layout_alignStart="@+id/textViewNombreEscuadra" />
-
-        <TextView
-            android:id="@+id/textViewCreditos"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="200dp"
-            android:layout_marginStart="98dp"
-            android:layout_marginRight="150dp"
-            android:layout_alignBottom="@+id/textViewExperiencia"
-            android:layout_alignStart="@+id/experiencia"
-            android:text="Créditos"
-            android:layout_alignTop="@+id/textViewVida" />
-
-        <TextView
-            android:id="@+id/textViewNumeroCreditos"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1250"
-            android:layout_below="@+id/textViewCreditos"
-            android:layout_alignStart="@+id/textViewCreditos"
-            />
+            android:layout_below="@+id/textViewNivel"
+            android:layout_alignEnd="@+id/textViewNivel" />
 
     </RelativeLayout>
 
