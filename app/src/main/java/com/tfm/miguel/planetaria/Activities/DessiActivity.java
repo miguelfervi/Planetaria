@@ -1,5 +1,6 @@
 package com.tfm.miguel.planetaria.Activities;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -7,12 +8,15 @@ import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageButton;
 
 import com.tfm.miguel.planetaria.R;
 
 import static com.tfm.miguel.planetaria.R.layout.toolbar;
 
 public class DessiActivity extends AppCompatActivity {
+
+    private ImageButton btn1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,5 +51,15 @@ public class DessiActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        btn1 = (ImageButton) findViewById(R.id.imageButton1);
+
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DessiActivity.this, Ejercicio1Activity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
