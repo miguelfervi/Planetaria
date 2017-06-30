@@ -29,6 +29,11 @@ public class Explorador {
         this.apellidos = apellidos;
         this.dni = dni;
         this.vidas = vidas;
+        this.nRecompensas = nRecompensas;
+        this.experiencia = experiencia;
+        this.clasificacion = clasificacion;
+        this.notas = notas;
+        this.recompensas = recompensas;
 
 
     }

@@ -5,4 +5,9 @@ package com.tfm.miguel.planetaria.Models;
  */
 
 public class Notas {
+
+    private String asignatura;
+    private String tarea;
+    private float nota;
+
 }

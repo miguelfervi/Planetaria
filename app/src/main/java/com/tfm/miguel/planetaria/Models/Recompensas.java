@@ -5,4 +5,5 @@ package com.tfm.miguel.planetaria.Models;
  */
 
 public class Recompensas {
+
 }

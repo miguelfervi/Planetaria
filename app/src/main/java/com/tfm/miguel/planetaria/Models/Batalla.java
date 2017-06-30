@@ -5,4 +5,8 @@ package com.tfm.miguel.planetaria.Models;
  */
 
 public class Batalla {
+
+    private int codigo;
+
+
 }
