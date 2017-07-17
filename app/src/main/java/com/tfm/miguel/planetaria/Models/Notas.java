@@ -9,5 +9,6 @@ public class Notas {
     private String asignatura;
     private String tarea;
     private float nota;
+    private int experiencia;
 
 }

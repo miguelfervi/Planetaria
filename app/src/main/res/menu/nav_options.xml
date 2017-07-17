@@ -25,11 +25,6 @@
             android:icon="@drawable/gun"
 
             />
-        <item
-            android:id="@+id/menu_escuadra"
-            android:title="Escuadra"
-            android:icon="@drawable/starwars"
-            />
 
         <item
             android:id="@+id/menu_galeria_espacial"
@@ -47,11 +42,6 @@
             android:id="@+id/menu_alertas"
             android:title="Alertas"
             android:icon="@drawable/bell"
-            />
-        <item
-            android:id="@+id/menu_ajustes"
-            android:title="Ajustes"
-            android:icon="@drawable/settings"
             />
         <item
             android:id="@+id/menu_cerrar_sesion"

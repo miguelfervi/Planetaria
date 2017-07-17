@@ -6,4 +6,9 @@ package com.tfm.miguel.planetaria.Models;
 
 public class Recompensas {
 
+    private String nombre;
+    private String descripcion;
+    private int imagen;
+
+
 }

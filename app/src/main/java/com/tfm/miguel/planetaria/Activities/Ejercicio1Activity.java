@@ -16,19 +16,13 @@ public class Ejercicio1Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ejercicio1);
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
-        myToolbar.setTitle("DESSI");
+        myToolbar.setTitle("Tarea 1");
         setSupportActionBar(myToolbar);
 
 
         Window window = this.getWindow();
-
-        // clear FLAG_TRANSLUCENT_STATUS flag:
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-
-        // add FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS flag to the window
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-
-        // finally change the color
         window.setStatusBarColor(getResources().getColor(R.color.colorPrimaryDark));
 
         myToolbar.setNavigationOnClickListener(new View.OnClickListener() {

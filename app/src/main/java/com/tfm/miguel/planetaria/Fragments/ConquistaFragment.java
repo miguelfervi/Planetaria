@@ -32,7 +32,6 @@ public class ConquistaFragment extends Fragment {
         TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tabMenu);
         tabLayout.addTab(tabLayout.newTab().setText("Primer sistema"));
         tabLayout.addTab(tabLayout.newTab().setText("Segundo sistema"));
-        tabLayout.addTab(tabLayout.newTab().setText("Logros"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         final ViewPager viewPager = (ViewPager) view.findViewById(R.id.viewPager);
