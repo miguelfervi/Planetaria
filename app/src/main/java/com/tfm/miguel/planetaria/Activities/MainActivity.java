@@ -12,6 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.tfm.miguel.planetaria.Fragments.ConquistaFragment;
+import com.tfm.miguel.planetaria.Fragments.SistemaNavegacionFragment;
 import com.tfm.miguel.planetaria.R;
 
 public class MainActivity extends AppCompatActivity {
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         setFragmentByDefault();
 
 
+
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -47,6 +49,10 @@ public class MainActivity extends AppCompatActivity {
 
 
                         break;
+
+                    case R.id.menu_sistema_de_exploracion:
+                        fragment = new SistemaNavegacionFragment();
+                        fragmentTransaction = true;
 
 
                 }
