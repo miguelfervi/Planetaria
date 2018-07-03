@@ -35,7 +35,7 @@ public class SistemaNavegacionFragment extends Fragment {
 
     private ProximityContentManager proximityContentManager;
     private ProximityContentAdapter proximityContentAdapter;
-    ListView gridView;
+    GridView gridView;
 
     public CloudCredentials cloudCredentials =
             new EstimoteCloudCredentials("gamificacion-proximidad-oms", "e134ca8549d5e356c06504db5b13d0e9");
@@ -53,7 +53,7 @@ public class SistemaNavegacionFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_sistema_navegacion, container, false);
         proximityContentAdapter = new ProximityContentAdapter(getActivity());
 
-        gridView = (ListView) view.findViewById(R.id.listView);
+        gridView = (GridView) view.findViewById(R.id.gridView);
 
         gridView.setAdapter(proximityContentAdapter);
         RequirementsWizardFactory

@@ -33,9 +33,7 @@
         android:layout_alignParentStart="true"
         android:columnWidth="300dp"
         android:gravity="center"
-        android:horizontalSpacing="10dp"
         android:numColumns="auto_fit"
-        android:stretchMode="columnWidth"
-        android:verticalSpacing="10dp" />
+        android:stretchMode="columnWidth" />
 
 </RelativeLayout>
