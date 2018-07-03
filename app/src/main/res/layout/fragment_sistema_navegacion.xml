@@ -5,8 +5,8 @@
     tools:context="com.tfm.miguel.planetaria.Fragments.SistemaNavegacionFragment">
 
 
-    <GridView
-        android:id="@+id/gridView"
+    <ListView
+        android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="549dp"
         android:layout_alignParentBottom="true"

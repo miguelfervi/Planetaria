@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.GridView;
+import android.widget.ListView;
 
 import com.estimote.cloud_plugin.common.EstimoteCloudCredentials;
 import com.estimote.internal_plugins_api.cloud.CloudCredentials;
@@ -34,6 +35,7 @@ public class SistemaNavegacionFragment extends Fragment {
 
     private ProximityContentManager proximityContentManager;
     private ProximityContentAdapter proximityContentAdapter;
+    ListView gridView;
 
     public CloudCredentials cloudCredentials =
             new EstimoteCloudCredentials("gamificacion-proximidad-oms", "e134ca8549d5e356c06504db5b13d0e9");
@@ -49,11 +51,11 @@ public class SistemaNavegacionFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_sistema_navegacion, container, false);
-        GridView gridView = (GridView) view.findViewById(R.id.gridView);
+        proximityContentAdapter = new ProximityContentAdapter(getActivity());
+
+        gridView = (ListView) view.findViewById(R.id.listView);
 
         gridView.setAdapter(proximityContentAdapter);
-
-        proximityContentAdapter = new ProximityContentAdapter(getActivity());
         RequirementsWizardFactory
                 .createEstimoteRequirementsWizard()
                 .fulfillRequirements(getActivity(),
