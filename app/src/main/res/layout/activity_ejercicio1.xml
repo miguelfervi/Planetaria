@@ -31,17 +31,67 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="223dp"
-        android:text="Esto es una tarea"
+        android:text="Esto es una tarea acerca de si conocemos un concepto"
         android:id="@+id/ejemplo"
         android:textColor="#000000"/>
+
 
     <Button
         android:id="@+id/buttonConfirm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="123dp"
+        android:text="Confirmar" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="500dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="285dp"
-        android:text="Confirmar"/>
+        android:layout_marginTop="0dp">
+
+
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="RadioButton" />
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="275dp"
+            android:text="Respuesta 1"
+            android:buttonTint="@color/colorPrimaryText"
+            android:textColor="#000000" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Respuesta 2"
+            android:buttonTint="@color/colorPrimaryText"
+            android:textColor="#000000" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="233dp"
+            android:text="Respuesta 3"
+            android:buttonTint="@color/colorPrimaryText"
+            android:textColor="#000000" />
+
+
+    </RadioGroup>
 
 </RelativeLayout>

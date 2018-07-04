@@ -11,7 +11,6 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 import com.estimote.cloud_plugin.common.EstimoteCloudCredentials;
 import com.estimote.internal_plugins_api.cloud.CloudCredentials;
@@ -33,6 +32,17 @@ import kotlin.jvm.functions.Function1;
  */
 public class SistemaNavegacionFragment extends Fragment {
 
+
+
+    private String someVariable;
+
+    public String getSomeVariable() {
+        return someVariable;
+    }
+
+    public void setSomeVariable(String someVariable) {
+        this.someVariable = someVariable;
+    }
 
     private ProximityContentManager proximityContentManager;
     private ProximityContentAdapter proximityContentAdapter;
@@ -63,7 +73,7 @@ public class SistemaNavegacionFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(getActivity(), Ejercicio1Activity.class);
-                Toast.makeText(getActivity(),"Evento activido",Toast.LENGTH_LONG).show();
+                intent.putExtra("state", "success");
                 getActivity().startActivity(intent);
             }
         });

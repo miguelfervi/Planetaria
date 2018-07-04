@@ -3,31 +3,22 @@ package com.tfm.miguel.planetaria.Activities;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.GridView;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
 import com.estimote.cloud_plugin.common.EstimoteCloudCredentials;
 import com.estimote.internal_plugins_api.cloud.CloudCredentials;
-import com.estimote.mustard.rx_goodness.rx_requirements_wizard.Requirement;
-import com.estimote.mustard.rx_goodness.rx_requirements_wizard.RequirementsWizardFactory;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.tfm.miguel.planetaria.Models.Ejemplo;
+import com.tfm.miguel.planetaria.Models.Pregunta;
 import com.tfm.miguel.planetaria.R;
 import com.tfm.miguel.planetaria.estimote.ProximityContentAdapter;
 import com.tfm.miguel.planetaria.estimote.ProximityContentManager;
-
-import java.util.List;
-
-import kotlin.Unit;
-import kotlin.jvm.functions.Function0;
-import kotlin.jvm.functions.Function1;
 
 public class Ejercicio1Activity extends AppCompatActivity {
 
@@ -36,6 +27,8 @@ public class Ejercicio1Activity extends AppCompatActivity {
     private ProximityContentAdapter proximityContentAdapter;
     private Button btn;
     private TextView tv;
+    private RadioButton r1,r2,r3;
+
     private DatabaseReference mDatabaseReference;
 
     public CloudCredentials cloudCredentials =
@@ -67,13 +60,17 @@ public class Ejercicio1Activity extends AppCompatActivity {
 
         btn = (Button) findViewById(R.id.buttonConfirm);
         tv = (TextView) findViewById(R.id.ejemplo);
+        r1 = (RadioButton) findViewById(R.id.radioButton);
+        r2 = (RadioButton) findViewById(R.id.radioButton2);
+        r3 = (RadioButton) findViewById(R.id.radioButton3);
+
         FirebaseApp.initializeApp(this);
 
         mDatabaseReference = FirebaseDatabase.getInstance().getReference();
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Ejemplo ejemplo = new Ejemplo(tv.getText().toString());
+                Pregunta ejemplo = new Pregunta(tv.getText().toString(),r1.isChecked(),r2.isChecked(),r3.isChecked());
                 mDatabaseReference.child("ejercicios").push().setValue(ejemplo);
                 finish();
             }
