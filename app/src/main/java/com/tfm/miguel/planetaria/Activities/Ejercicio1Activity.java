@@ -26,7 +26,7 @@ public class Ejercicio1Activity extends AppCompatActivity {
     private ProximityContentManager proximityContentManager;
     private ProximityContentAdapter proximityContentAdapter;
     private Button btn;
-    private TextView tv;
+    private TextView tv,respuesta;
     private RadioButton r1,r2,r3;
 
     private DatabaseReference mDatabaseReference;
@@ -63,6 +63,8 @@ public class Ejercicio1Activity extends AppCompatActivity {
         r1 = (RadioButton) findViewById(R.id.radioButton);
         r2 = (RadioButton) findViewById(R.id.radioButton2);
         r3 = (RadioButton) findViewById(R.id.radioButton3);
+        respuesta = (TextView) findViewById(R.id.respuesta);
+
 
         FirebaseApp.initializeApp(this);
 
@@ -72,7 +74,11 @@ public class Ejercicio1Activity extends AppCompatActivity {
             public void onClick(View v) {
                 Pregunta ejemplo = new Pregunta(tv.getText().toString(),r1.isChecked(),r2.isChecked(),r3.isChecked());
                 mDatabaseReference.child("ejercicios").push().setValue(ejemplo);
-                finish();
+                if(r1.isChecked()){
+                    respuesta.setText("Correcto");
+                } else {
+                    respuesta.setText("Incorrecto");
+                }
             }
         });
 

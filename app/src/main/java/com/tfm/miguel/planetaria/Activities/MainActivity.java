@@ -12,6 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.tfm.miguel.planetaria.Fragments.ConquistaFragment;
+import com.tfm.miguel.planetaria.Fragments.ExploradorFragment;
 import com.tfm.miguel.planetaria.Fragments.SistemaNavegacionFragment;
 import com.tfm.miguel.planetaria.R;
 
@@ -19,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
 
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
-
 
 
     @Override
@@ -34,14 +34,13 @@ public class MainActivity extends AppCompatActivity {
         setFragmentByDefault();
 
 
-
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 boolean fragmentTransaction = false;
                 Fragment fragment = null;
 
-                switch (item.getItemId()){
+                switch (item.getItemId()) {
 
                     case R.id.menu_conquista:
                         fragment = new ConquistaFragment();
@@ -50,18 +49,22 @@ public class MainActivity extends AppCompatActivity {
 
                         break;
 
-                    case R.id.menu_sistema_de_exploracion:
-                        fragment = new SistemaNavegacionFragment();
+                    case R.id.menu_explorador:
+                        fragment = new ExploradorFragment();
                         fragmentTransaction = true;
 
 
+                        break;
+
+                    case R.id.menu_sistema_de_exploracion:
+                        fragment = new SistemaNavegacionFragment();
+                        fragmentTransaction = true;
                 }
 
-                if(fragmentTransaction){
-                    changeFragment(fragment,item);
+                if (fragmentTransaction) {
+                    changeFragment(fragment, item);
                     drawerLayout.closeDrawers();
                 }
-
 
 
                 return true;
@@ -69,26 +72,26 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void setToolbar(){
+    private void setToolbar() {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_home);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
-    private void setFragmentByDefault(){
+    private void setFragmentByDefault() {
         changeFragment(new ConquistaFragment(), navigationView.getMenu().getItem(0));
     }
 
-    private void changeFragment(Fragment fragment, MenuItem item){
+    private void changeFragment(Fragment fragment, MenuItem item) {
 
-            getSupportFragmentManager()
-                    .beginTransaction()
-                    .replace(R.id.content_frame,fragment)
-                    .commit();
-            item.setChecked(true);
-            getSupportActionBar().setTitle(item.getTitle());
-            drawerLayout.closeDrawers();
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.content_frame, fragment)
+                .commit();
+        item.setChecked(true);
+        getSupportActionBar().setTitle(item.getTitle());
+        drawerLayout.closeDrawers();
 
     }
 

@@ -37,12 +37,6 @@
             android:icon="@drawable/medal"
             />
 
-
-        <item
-            android:id="@+id/menu_alertas"
-            android:title="Alertas"
-            android:icon="@drawable/bell"
-            />
         <item
             android:id="@+id/menu_cerrar_sesion"
             android:title=" Cerrar Sesión"

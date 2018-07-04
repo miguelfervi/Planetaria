@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "127628382332-9qo5k7rms8rbcrbt9a8kv000u9b8agfm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tfm.miguel.planetaria",
+            "certificate_hash": "ba71324dbc4aaa3661cdad5989bb7f5496e21d1b"
+          }
+        },
+        {
           "client_id": "127628382332-h352fde6ql54nfqa1juejna4kut0s0md.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "127628382332-h352fde6ql54nfqa1juejna4kut0s0md.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2
