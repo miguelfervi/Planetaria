@@ -7,12 +7,12 @@ package com.tfm.miguel.planetaria.Models;
 public class Pregunta {
 
     public String pregunta;
-    public Boolean respuesta1;
-    public Boolean respuesta2;
-    public Boolean respuesta3;
+    public String respuesta1;
+    public String respuesta2;
+    public String respuesta3;
 
     public Pregunta (){}
-    public Pregunta(String pregunta, Boolean respuesta1, Boolean respuesta2, Boolean respuesta3){
+    public Pregunta(String pregunta, String respuesta1, String respuesta2, String respuesta3){
         this.pregunta = pregunta;
         this.respuesta1 = respuesta1;
         this.respuesta2 = respuesta2;

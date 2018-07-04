@@ -94,17 +94,16 @@ public class Ejercicio1Activity extends AppCompatActivity {
 
     public void readFromDataBase(){
 
-        pregunta.child("pregunta").addValueEventListener(new ValueEventListener() {
+        pregunta.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
-                String email = dataSnapshot.getValue(String.class);
-                tv.setText(email);
-                r1.setText(email);
-                r2.setText(email);
-                r3.setText(email);
-                respuesta.setText(email);
+                Pregunta email = dataSnapshot.getValue(Pregunta.class);
+                tv.setText(email.pregunta);
+                r1.setText(email.respuesta1);
+                r2.setText(email.respuesta2);
+                r3.setText(email.respuesta3);
             }
 
             @Override
