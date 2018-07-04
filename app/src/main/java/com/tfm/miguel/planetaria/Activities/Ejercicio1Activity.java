@@ -3,6 +3,7 @@ package com.tfm.miguel.planetaria.Activities;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -13,8 +14,11 @@ import android.widget.TextView;
 import com.estimote.cloud_plugin.common.EstimoteCloudCredentials;
 import com.estimote.internal_plugins_api.cloud.CloudCredentials;
 import com.google.firebase.FirebaseApp;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.tfm.miguel.planetaria.Models.Pregunta;
 import com.tfm.miguel.planetaria.R;
 import com.tfm.miguel.planetaria.estimote.ProximityContentAdapter;
@@ -28,6 +32,11 @@ public class Ejercicio1Activity extends AppCompatActivity {
     private Button btn;
     private TextView tv,respuesta;
     private RadioButton r1,r2,r3;
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
+    DatabaseReference pregunta = ref.child("ejercicios");
+
+    //DatabaseReference myRef = database.getReference("message");
 
     private DatabaseReference mDatabaseReference;
 
@@ -58,6 +67,10 @@ public class Ejercicio1Activity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
+        FirebaseApp.initializeApp(this);
+
+        mDatabaseReference = FirebaseDatabase.getInstance().getReference();
+
         btn = (Button) findViewById(R.id.buttonConfirm);
         tv = (TextView) findViewById(R.id.ejemplo);
         r1 = (RadioButton) findViewById(R.id.radioButton);
@@ -66,23 +79,47 @@ public class Ejercicio1Activity extends AppCompatActivity {
         respuesta = (TextView) findViewById(R.id.respuesta);
 
 
-        FirebaseApp.initializeApp(this);
+        readFromDataBase();
 
-        mDatabaseReference = FirebaseDatabase.getInstance().getReference();
+
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Pregunta ejemplo = new Pregunta(tv.getText().toString(),r1.isChecked(),r2.isChecked(),r3.isChecked());
-                mDatabaseReference.child("ejercicios").push().setValue(ejemplo);
-                if(r1.isChecked()){
-                    respuesta.setText("Correcto");
-                } else {
-                    respuesta.setText("Incorrecto");
-                }
+                writeDatabase();
             }
         });
 
 
     }
 
+    public void readFromDataBase(){
+
+        pregunta.child("pregunta").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+                String email = dataSnapshot.getValue(String.class);
+                tv.setText(email);
+                r1.setText(email);
+                r2.setText(email);
+                r3.setText(email);
+                respuesta.setText(email);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+            }
+        });
+    }
+    public void writeDatabase (){
+        //Pregunta ejemplo = new Pregunta(tv.getText().toString(),r1.isChecked(),r2.isChecked(),r3.isChecked());
+        mDatabaseReference.child("respuestas").push().setValue(r1.isChecked());
+        if(r1.isChecked()){
+            respuesta.setText("Correcto");
+        } else {
+            respuesta.setText("Incorrecto");
+        }
+    }
 }

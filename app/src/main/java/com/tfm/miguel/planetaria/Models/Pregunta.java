@@ -11,6 +11,7 @@ public class Pregunta {
     public Boolean respuesta2;
     public Boolean respuesta3;
 
+    public Pregunta (){}
     public Pregunta(String pregunta, Boolean respuesta1, Boolean respuesta2, Boolean respuesta3){
         this.pregunta = pregunta;
         this.respuesta1 = respuesta1;
