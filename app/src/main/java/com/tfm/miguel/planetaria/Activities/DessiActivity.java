@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.tfm.miguel.planetaria.R;
 
@@ -54,8 +55,20 @@ public class DessiActivity extends AppCompatActivity {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(DessiActivity.this, Ejercicio1Activity.class);
-                startActivity(intent);
+                if(getIntent().hasExtra("state")){
+                    if (getIntent().getStringExtra("state").equals("success")){
+                        btn1.setEnabled(true);
+                        Intent intent = new Intent(DessiActivity.this, Ejercicio1Activity.class);
+                        startActivity(intent);
+                    }else{
+                        Toast.makeText(getApplicationContext(),"Disable",Toast.LENGTH_LONG).show();
+                        btn1.setEnabled(false);
+                    }
+                }else{
+                    Toast.makeText(getApplicationContext(),"Disable",Toast.LENGTH_LONG).show();
+                    btn1.setEnabled(false);
+                }
+
             }
         });
     }

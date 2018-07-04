@@ -1,22 +1,23 @@
 package com.tfm.miguel.planetaria.Fragments;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
-import android.view.WindowManager;
+import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.ListView;
+import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.estimote.cloud_plugin.common.EstimoteCloudCredentials;
 import com.estimote.internal_plugins_api.cloud.CloudCredentials;
 import com.estimote.mustard.rx_goodness.rx_requirements_wizard.Requirement;
 import com.estimote.mustard.rx_goodness.rx_requirements_wizard.RequirementsWizardFactory;
+import com.tfm.miguel.planetaria.Activities.Ejercicio1Activity;
 import com.tfm.miguel.planetaria.R;
 import com.tfm.miguel.planetaria.estimote.ProximityContentAdapter;
 import com.tfm.miguel.planetaria.estimote.ProximityContentManager;
@@ -36,6 +37,7 @@ public class SistemaNavegacionFragment extends Fragment {
     private ProximityContentManager proximityContentManager;
     private ProximityContentAdapter proximityContentAdapter;
     GridView gridView;
+    ImageButton btn1;
 
     public CloudCredentials cloudCredentials =
             new EstimoteCloudCredentials("gamificacion-proximidad-oms", "e134ca8549d5e356c06504db5b13d0e9");
@@ -56,6 +58,15 @@ public class SistemaNavegacionFragment extends Fragment {
         gridView = (GridView) view.findViewById(R.id.gridView);
 
         gridView.setAdapter(proximityContentAdapter);
+
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(getActivity(), Ejercicio1Activity.class);
+                Toast.makeText(getActivity(),"Evento activido",Toast.LENGTH_LONG).show();
+                getActivity().startActivity(intent);
+            }
+        });
         RequirementsWizardFactory
                 .createEstimoteRequirementsWizard()
                 .fulfillRequirements(getActivity(),

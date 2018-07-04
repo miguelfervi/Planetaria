@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activities.DessiActivity" />
-        <activity android:name=".Activities.Ejercicio1Activity"></activity>
+        <activity android:name=".Activities.Ejercicio1Activity" />
     </application>
 
 </manifest>

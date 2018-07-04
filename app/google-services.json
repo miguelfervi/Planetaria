@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "127628382332",
+    "firebase_url": "https://planetaria-4a540.firebaseio.com",
+    "project_id": "planetaria-4a540",
+    "storage_bucket": "planetaria-4a540.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:127628382332:android:f3a9615fb1585564",
+        "android_client_info": {
+          "package_name": "com.tfm.miguel.planetaria"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "127628382332-h352fde6ql54nfqa1juejna4kut0s0md.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6FAI3lYE9TZHDXdexE9O38uZmsb1Hqsk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
