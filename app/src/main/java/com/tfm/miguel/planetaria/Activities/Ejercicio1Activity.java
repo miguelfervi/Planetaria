@@ -15,6 +15,7 @@ import com.estimote.cloud_plugin.common.EstimoteCloudCredentials;
 import com.estimote.internal_plugins_api.cloud.CloudCredentials;
 import com.estimote.mustard.rx_goodness.rx_requirements_wizard.Requirement;
 import com.estimote.mustard.rx_goodness.rx_requirements_wizard.RequirementsWizardFactory;
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.tfm.miguel.planetaria.Models.Ejemplo;
@@ -66,16 +67,17 @@ public class Ejercicio1Activity extends AppCompatActivity {
 
         btn = (Button) findViewById(R.id.buttonConfirm);
         tv = (TextView) findViewById(R.id.ejemplo);
+        FirebaseApp.initializeApp(this);
 
-       /* mDatabaseReference = FirebaseDatabase.getInstance().getReference();
+        mDatabaseReference = FirebaseDatabase.getInstance().getReference();
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Ejemplo ejemplo = new Ejemplo(tv.getText().toString());
-                mDatabaseReference.child("ejemplo").push().setValue(ejemplo);
+                mDatabaseReference.child("ejercicios").push().setValue(ejemplo);
                 finish();
             }
-        });*/
+        });
 
 
     }
