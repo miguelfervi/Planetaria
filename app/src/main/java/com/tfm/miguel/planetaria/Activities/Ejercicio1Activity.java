@@ -112,13 +112,28 @@ public class Ejercicio1Activity extends AppCompatActivity {
             }
         });
     }
+
+    public void checkAnswer (){
+        pregunta.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                Pregunta pregunta = dataSnapshot.getValue(Pregunta.class);
+                if(r1.isChecked()){
+                     respuesta.setText("Correcto");
+                 } else {
+                    respuesta.setText("Incorrecto");
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+            }
+        });
+    }
     public void writeDatabase (){
         mDatabaseReference.child("respuestas").push().setValue(r1.isChecked());
-        if(r1.isChecked()){
-            respuesta.setText("Correcto");
-        } else {
-            respuesta.setText("Incorrecto");
-        }
+        checkAnswer();
     }
 
 }
