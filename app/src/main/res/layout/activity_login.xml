@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textEmailAddress"
-        android:text="Email"
+        android:text="miguelfervi@gmail.com"
         android:textColor="#111111"
         android:layout_marginTop="72dp"
         android:layout_below="@+id/imageViewPlanetaria"
@@ -29,7 +29,7 @@
         android:ems="10"
         android:textColor="#111111"
         android:inputType="textPassword"
-        android:text="Contraseña"
+        android:text="123456"
         android:layout_marginTop="33dp"
         android:layout_below="@+id/editTextEmail"
         android:layout_centerHorizontal="true" />
