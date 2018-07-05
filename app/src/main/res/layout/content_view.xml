@@ -40,6 +40,13 @@
             android:textColor="@android:color/white"
             android:textSize="17sp"
             tools:text="f04d...b13c" />
+
+        <TextView
+            android:id="@+id/asignatura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="17sp" />
     </LinearLayout>
 
 </LinearLayout>

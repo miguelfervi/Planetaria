@@ -99,11 +99,11 @@ public class Ejercicio1Activity extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
-                Pregunta email = dataSnapshot.getValue(Pregunta.class);
-                tv.setText(email.pregunta);
-                r1.setText(email.respuesta1);
-                r2.setText(email.respuesta2);
-                r3.setText(email.respuesta3);
+                Pregunta pregunta = dataSnapshot.getValue(Pregunta.class);
+                tv.setText(pregunta.pregunta);
+                r1.setText(pregunta.respuesta1);
+                r2.setText(pregunta.respuesta2);
+                r3.setText(pregunta.respuesta3);
             }
 
             @Override
@@ -113,7 +113,6 @@ public class Ejercicio1Activity extends AppCompatActivity {
         });
     }
     public void writeDatabase (){
-        //Pregunta ejemplo = new Pregunta(tv.getText().toString(),r1.isChecked(),r2.isChecked(),r3.isChecked());
         mDatabaseReference.child("respuestas").push().setValue(r1.isChecked());
         if(r1.isChecked()){
             respuesta.setText("Correcto");
@@ -121,4 +120,5 @@ public class Ejercicio1Activity extends AppCompatActivity {
             respuesta.setText("Incorrecto");
         }
     }
+
 }

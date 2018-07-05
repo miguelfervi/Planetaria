@@ -59,6 +59,8 @@ public class ProximityContentAdapter extends BaseAdapter {
 
         TextView title = convertView.findViewById(R.id.title);
         TextView subtitle = convertView.findViewById(R.id.subtitle);
+        TextView asignatura = convertView.findViewById(R.id.asignatura);
+        asignatura.setText("DESSI");
 
         title.setText(content.getTitle());
         subtitle.setText(content.getSubtitle());

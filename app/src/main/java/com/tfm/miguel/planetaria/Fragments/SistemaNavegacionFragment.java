@@ -33,30 +33,16 @@ import kotlin.jvm.functions.Function1;
 public class SistemaNavegacionFragment extends Fragment {
 
 
-
-    private String someVariable;
-
-    public String getSomeVariable() {
-        return someVariable;
-    }
-
-    public void setSomeVariable(String someVariable) {
-        this.someVariable = someVariable;
-    }
-
     private ProximityContentManager proximityContentManager;
     private ProximityContentAdapter proximityContentAdapter;
     GridView gridView;
-    ImageButton btn1;
 
     public CloudCredentials cloudCredentials =
             new EstimoteCloudCredentials("gamificacion-proximidad-oms", "e134ca8549d5e356c06504db5b13d0e9");
 
-
     public SistemaNavegacionFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -66,9 +52,7 @@ public class SistemaNavegacionFragment extends Fragment {
         proximityContentAdapter = new ProximityContentAdapter(getActivity());
 
         gridView = (GridView) view.findViewById(R.id.gridView);
-
         gridView.setAdapter(proximityContentAdapter);
-
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
