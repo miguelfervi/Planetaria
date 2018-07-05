@@ -146,7 +146,7 @@ public class Ejercicio1Activity extends AppCompatActivity {
         });
     }
     public void writeDatabase ( ){
-            mDatabaseReference.child("respuestas").child(userID).push().setValue(r1.isChecked());
+            mDatabaseReference.child("respuestas").child(userID).push().setValue(r1.getText());
             checkAnswer();
     }
 
