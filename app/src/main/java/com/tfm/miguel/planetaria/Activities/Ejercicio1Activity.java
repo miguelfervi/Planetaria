@@ -44,14 +44,10 @@ public class Ejercicio1Activity extends AppCompatActivity {
     private DatabaseReference myRef;
     public String userID;
 
-
-    //DatabaseReference myRef = database.getReference("message");
-
     private DatabaseReference mDatabaseReference;
 
     public CloudCredentials cloudCredentials =
             new EstimoteCloudCredentials("gamificacion-proximidad-oms", "e134ca8549d5e356c06504db5b13d0e9");
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

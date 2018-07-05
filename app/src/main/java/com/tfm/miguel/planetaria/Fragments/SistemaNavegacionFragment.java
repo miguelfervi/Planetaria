@@ -41,7 +41,6 @@ public class SistemaNavegacionFragment extends Fragment {
             new EstimoteCloudCredentials("gamificacion-proximidad-oms", "e134ca8549d5e356c06504db5b13d0e9");
 
     public SistemaNavegacionFragment() {
-        // Required empty public constructor
     }
 
     @Override

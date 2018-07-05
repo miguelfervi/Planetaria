@@ -36,7 +36,6 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
         buttonLogin = (Button) findViewById(R.id.buttonAcceder);
@@ -51,7 +50,6 @@ public class LoginActivity extends AppCompatActivity {
 
         // finally change the color
         window.setStatusBarColor(getResources().getColor(R.color.colorPrimaryDark));
-
 
         mAuthListner = new FirebaseAuth.AuthStateListener() {
             @Override
@@ -88,7 +86,7 @@ public class LoginActivity extends AppCompatActivity {
                 if(task.isSuccessful()){
                     goToMain();
                 } else {
-                    Toast.makeText(getApplication(),"Datos no encontrados",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplication(),"No es posible iniciar sesión",Toast.LENGTH_SHORT).show();
                 }
             }
         });
